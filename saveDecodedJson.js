@@ -1,11 +1,11 @@
 const fs = require('fs');
-const path = require('path');
 const decoding = require('./decodingCriptografiaJc');
 
-const fileJson =  path.resolve(__dirname, './answer.json')
+async function saveDecoded (fileJson) {
 
+    try {
 
-fs.readFile(fileJson, ( err, data ) => {
+    fs.readFile(fileJson, ( err, data ) => {
     
     if (err) {
         console.log(err)
@@ -18,19 +18,23 @@ fs.readFile(fileJson, ( err, data ) => {
 
     fs.writeFile(fileJson, JSON.stringify(file), err => {
 
-        if (err) {
-            console.log(err)
-            return
-        
-        } else {
+          if (err) {
+                console.log(err)
+                return
             
-            console.log('Files was save!')
-
-        }
-
+          } else {
+           
+            console.log('Files was decoded and save!')
+            
+          }
+        });
     });
-});
+    
+    } catch(err) {
+
+        console.log(err)
+    }
+};
 
 
-
-
+module.exports = saveDecoded;
