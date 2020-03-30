@@ -1,0 +1,26 @@
+{
+  "name": "criptografiajuliocesar",
+  "version": "1.0.0",
+  "description": "Solution for condenation challenge.",
+  "main": "criptografiaJulioCesar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorAlmeidaFonseca/criptografiaJulioCesar.git"
+  },
+  "author": "Victor Fonseca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorAlmeidaFonseca/criptografiaJulioCesar/issues"
+  },
+  "homepage": "https://github.com/VictorAlmeidaFonseca/criptografiaJulioCesar#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "mocha-axios": "^1.3.0",
+    "should": "^13.2.3"
+  }
+}
