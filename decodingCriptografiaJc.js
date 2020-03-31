@@ -22,7 +22,7 @@ function decoding(numero_casas, decifrado) {
         }
     }
 
-    console.log(solved);
+    // console.log(solved);
     return solved;
     
 };

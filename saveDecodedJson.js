@@ -1,5 +1,7 @@
 const fs = require('fs');
 const decoding = require('./decodingCriptografiaJc');
+const cryptoJson = require('./cryptJson');
+
 
 async function saveDecoded (fileJson) {
 
@@ -13,8 +15,11 @@ async function saveDecoded (fileJson) {
     }
     
     const file = JSON.parse(data)
-    const  result = decoding(file.numero_casas, file.cifrado)
+    const result = decoding(file.numero_casas, file.cifrado)
+    const secret = cryptoJson(result)
+        
     file['decifrado'] = result 
+    file['resumo_criptografico'] = secret
 
     fs.writeFile(fileJson, JSON.stringify(file), err => {
 
@@ -24,13 +29,13 @@ async function saveDecoded (fileJson) {
             
           } else {
            
-            console.log('Files was decoded and save!')
+            console.log('Files was decoded, encrypted and save!')
             
           }
         });
     });
     
-    } catch(err) {
+    } catch (err) {
 
         console.log(err)
     }

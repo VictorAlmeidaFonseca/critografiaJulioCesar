@@ -1,23 +1,25 @@
 const path = require('path');
 const getJson = require('./getJson');
 const saveDecodedJson = require('./saveDecodedJson');
-const cryptJson = require('./cryptJson')
-
-
 
 const fileJson =  path.resolve(__dirname, './answer.json')
 
 
-async function getFile() {
+async function main(fileJson) {
+    
     try {
+    
         const waitFile =  await getJson();
-        saveDecodedJson(fileJson);
-                 
+        const waitDecod = await saveDecodedJson(fileJson);
+                       
+    
     } catch (err) {
+    
         console.log(err)
+    
     } 
-}
+};
 
-getFile();
+main(fileJson);
 
-            // getFile().then( cri =>  cryptJson(fileJson))
+        
