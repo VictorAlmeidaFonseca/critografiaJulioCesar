@@ -5,7 +5,8 @@
   "main": "criptografiaJulioCesar.js",
   "scripts": {
     "start": "node app.js",
-    "send": "node src/sendJson.js"
+    "send": "node src/sendJson.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "axios": "^0.19.2",
     "chai": "^4.2.0",
     "form-data": "^3.0.0",
+    "jest": "^25.4.0",
     "mocha-axios": "^1.3.0",
     "should": "^13.2.3"
   }
