@@ -6,9 +6,3 @@ AnswerApi.get('')
     const { numero_casas } = data
     }
 )
-
-console.log(numero_casas)
-// const { data } = await Api.get('')
-// const { numero_casas } = data
-
-// module.exports = 
